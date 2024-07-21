@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars RP Loading Screen</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="corner top-left"></div>
+    <div class="corner top-right"></div>
+    <div class="corner bottom-left"></div>
+    <div class="corner bottom-right"></div>
+    <div class="container">
+        <img src="images/logo.png" alt="Star Wars Logo" class="logo">
+        <h1>Comunidad Rebron</h1>
+        <p>Cargando, por favor espere...</p>
+        <div class="loading-bar">
+            <div class="loading-bar-inner"></div>
+        </div>
+    </div>
+    <button id="music-control" class="music-control">Pausar Música</button>
+    <audio id="background-music" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+    <script src="js/script.js"></script>
+</body>
+</html>

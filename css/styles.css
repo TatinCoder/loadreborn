@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/clones2003.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: center center;
+    }
+    50% {
+        background-position: center 5%;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+.corner {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background: url('../images/corner-detail.png') no-repeat center center;
+    background-size: cover;
+}
+
+.container {
+    position: absolute;
+    top: 52%; /* Ajuste para mover el cuadro más abajo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: 60%;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Star Jedi', Arial, sans-serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.loading-bar {
+    width: 100%;
+    max-width: 600px;
+    height: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffffff;
+    position: relative;
+}
+
+.loading-bar-inner {
+    width: 0;
+    height: 100%;
+    background-color: #ffffff;
+    animation: loading 10s linear infinite;
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.loading-bar-inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(0, 157, 255, 0.8), transparent);
+    animation: loading-glow 1s linear infinite;
+}
+
+@keyframes loading-glow {
+    0% { left: 0; }
+    100% { left: 100%; }
+}
+
+
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.music-control:hover {
+    background-color: #ffffff;
+    color: #000;
+}
